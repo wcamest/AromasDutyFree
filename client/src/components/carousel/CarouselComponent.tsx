@@ -48,12 +48,9 @@ const CarouselComponent = (props: Props) => {
       Functions.ResetInterval(1);
     },
     ResetInterval(currentSlideIndex: number = 0) {
-      if (!slides.length) return null;
-
       Functions.DisposeInterval();
       const timerId: NodeJS.Timeout = setInterval(() => {
         const updatedSlideIndex = Functions.UpdateCurrentSlideIndex(1);
-
         Functions.SetState({
           ...stateRef.current,
           currentSlideIndex: updatedSlideIndex,
