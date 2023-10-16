@@ -1,4 +1,5 @@
 import BannerCarouselComponent from "@/components/carousel/banner-carousel/BannerCarouselComponent";
+import HomeSectionComponent from "@/components/home-section/HomeSectionComponent";
 import BannerCarousel from "@/types/BannerCarousel";
 import React from "react";
 
@@ -36,7 +37,9 @@ const Home = (props: Props) => {
     <div className="w-full flex justify-center">
       <div className="w-full max-w-6xl flex flex-col gap-5">
         <BannerCarouselComponent data={carouselMockData} />
-       
+        <HomeSectionComponent title="Recomendados"></HomeSectionComponent>
+        <HomeSectionComponent title="Marcas"></HomeSectionComponent>
+        <HomeSectionComponent title="Lo mas vendido"></HomeSectionComponent>
       </div>
     </div>
   );
