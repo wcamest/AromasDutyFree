@@ -1,7 +1,9 @@
+import BrandShortcutsSectionComponent from "@/components/brand-shortcut/brand-shorcuts-section/BrandShortcutsSectionComponent";
 import BannerCarouselComponent from "@/components/carousel/banner-carousel/BannerCarouselComponent";
 import ProductsCarouselComponent from "@/components/carousel/products-carousel/ProductsCarouselComponent";
 import HomeSectionComponent from "@/components/home-section/HomeSectionComponent";
 import BannerCarousel from "@/types/BannerCarousel";
+import BrandShortcut from "@/types/BrandShortcut";
 import Product from "@/types/Product";
 import ProductCarousel from "@/types/ProductCarousel";
 import React from "react";
@@ -187,22 +189,59 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
   ],
 };
 
+const brandsShortcutsMockData: BrandShortcut[] = [
+  {
+    description: "Descripción de marca 1",
+    label: "Marca 1",
+    imageUrl: "/mock-images/3.jpg",
+  },
+  {
+    description: "Descripción de marca 2",
+    label: "Marca 2",
+    imageUrl: "/mock-images/6.jpg",
+  },
+  {
+    description: "Descripción de marca 3",
+    label: "Marca 3",
+    imageUrl: "/mock-images/7.jpg",
+  },
+  {
+    description: "Descripción de marca 4",
+    label: "Marca 4",
+    imageUrl: "/mock-images/3.jpg",
+  },
+  {
+    description: "Descripción de marca 5",
+    label: "Marca 5",
+    imageUrl: "/mock-images/4.jpg",
+  },
+  {
+    description: "Descripción de marca 6",
+    label: "Marca 6",
+    imageUrl: "/mock-images/9.jpg",
+  },
+];
+
 const Home = (props: Props) => {
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full lg:max-w-6xl flex flex-col gap-5">
+      <div className="w-full lg:max-w-6xl flex flex-col gap-20">
         <BannerCarouselComponent data={carouselMockData} />
-        <HomeSectionComponent title="Recomendados">
-          <ProductsCarouselComponent
-            data={recommendedProductsCarouselMockData}
-          />
-        </HomeSectionComponent>
-        <HomeSectionComponent title="Marcas"></HomeSectionComponent>
-        <HomeSectionComponent title="Lo mas vendido">
-          <ProductsCarouselComponent
-            data={bestSellersProductsCarouselMockData}
-          />
-        </HomeSectionComponent>
+        <div className="w-full flex flex-col gap-14">
+          <HomeSectionComponent title="Recomendados">
+            <ProductsCarouselComponent
+              data={recommendedProductsCarouselMockData}
+            />
+          </HomeSectionComponent>
+          <HomeSectionComponent title="Marcas">
+            <BrandShortcutsSectionComponent data={brandsShortcutsMockData} />
+          </HomeSectionComponent>
+          <HomeSectionComponent title="Lo mas vendido">
+            <ProductsCarouselComponent
+              data={bestSellersProductsCarouselMockData}
+            />
+          </HomeSectionComponent>
+        </div>
       </div>
     </div>
   );
