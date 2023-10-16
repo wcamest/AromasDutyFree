@@ -35,7 +35,7 @@ const NavBarComponent = (props: Props) => {
             src={"/aromas-logo.svg"}
             alt="Aromas Duty Free Logo"
             width={150}
-            height={48.97}
+            height={49}
           />
         </Link>
         <DesktopNavBarComponent menuItems={mockData} />
