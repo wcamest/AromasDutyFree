@@ -12,8 +12,8 @@ export default function RootLayout({
       <body className="w-screen h-screen flex flex-col">
         <NavBarComponent />
         <div className="w-full h-full overflow-hidden">
-          <div className="w-full h-full overflow-auto flex flex-col justify-between">
-            <div className="w-full p-5">{children}</div>
+          <div className="w-full h-full overflow-auto">
+            <div className="w-full min-h-full p-5">{children}</div>
             <FooterComponent />
           </div>
         </div>
