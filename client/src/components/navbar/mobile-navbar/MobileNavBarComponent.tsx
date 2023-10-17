@@ -45,9 +45,9 @@ const MobileNavBarComponent = (props: Props) => {
         </div>
       </div>
       {state.visible && (
-        <div className="fixed w-full h-screen left-0 top-0 overflow-hidden">
-          <div className="w-full h-full pt-20">
-            <div className="w-full h-full bg-white overflow-hidden">
+        <div className="fixed w-full h-screen left-0 top-0 overflow-hidden z-40">
+          <div className="relative w-full h-full pt-20">
+            <div className="relative w-full h-full bg-white overflow-hidden">
               <div className="w-full h-full px-3 py-2 overflow-auto flex flex-col gap-2">
                 {
                     Renderer.MenuItems()
