@@ -35,15 +35,15 @@ const ProductCardComponent = (props: Props) => {
   return (
     <div
       style={{ maxWidth: `${props.maxWidth}px` }}
-      className="p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
+      className="p-2 sm:p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
     >
       <div className="w-full relative aspect-square border border-solid border-rose-300 overflow-hidden rounded-md">
         {Renderer.FeaturedImage()}
       </div>
-      <h2 className="text-xl">{data.name}</h2>
-      <h3>{`$${Utils.FormatCurrency(data.salePrice)}`}</h3>
+      <h2 className="text-lg sm:text-xl">{data.name}</h2>
+      <h3 className="text-xs sm:text-lg">{`$${Utils.FormatCurrency(data.salePrice)}`}</h3>
       <div className="w-full mt-8 flex justify-stretch">
-        <ButtonComponent className="w-full">Consultar stock</ButtonComponent>
+        <ButtonComponent className="w-full text-xs sm:text-lg">Consultar stock</ButtonComponent>
       </div>
     </div>
   );
