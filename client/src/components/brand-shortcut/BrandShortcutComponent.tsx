@@ -12,10 +12,10 @@ const BrandShortcutComponent = (props: Props) => {
 
   return (
     <div className='flex flex-col items-center gap-3'>
-        <div className='relative w-40 aspect-square border-8 border-solid border-rose-500 rounded-full overflow-hidden'>
+        <div className='relative w-28 sm:w-40 aspect-square border-8 border-solid border-rose-500 rounded-full overflow-hidden'>
             <Image src={data.imageUrl} alt={data.description} fill={true} className='object-cover' />
         </div>
-        <h2 className='text-xl'>{data.label}</h2>
+        <h2 className='text-lg sm:text-xl'>{data.label}</h2>
     </div>
   )
 }
