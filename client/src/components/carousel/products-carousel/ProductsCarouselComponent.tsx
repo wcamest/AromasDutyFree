@@ -74,8 +74,6 @@ const ProductsCarouselComponent = (props: Props) => {
       else if (window.innerWidth >= 768) cardsPerSlide = 4;
       else if (window.innerWidth >= 640) cardsPerSlide = 3;
 
-      console.log(window.innerWidth);
-
       let slidesCount = Math.ceil(data.products.length / cardsPerSlide);
       let slicedProducts: Product[][] = [];
       let slides: React.JSX.Element[] = [];

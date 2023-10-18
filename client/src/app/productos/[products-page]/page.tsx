@@ -1,3 +1,4 @@
+import ClientSidePagination from "@/components/client-side-pagination/ClientSidePagination";
 import ProductCardComponent from "@/components/product-card/ProductCardComponent";
 import Product from "@/types/Product";
 import React from "react";
@@ -185,8 +186,11 @@ const page = (props: Props) => {
   };
 
   return (
-    <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-5 auto-rows-auto">
-      {Renderer.Cards()}
+    <div className="w-full flex flex-col gap-5">
+      <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-5 auto-rows-auto">
+        {Renderer.Cards()}
+      </div>
+      <ClientSidePagination page={27} pageCount={32} />
     </div>
   );
 };
