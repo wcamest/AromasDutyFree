@@ -34,26 +34,40 @@ const MobileNavBarComponent = (props: Props) => {
 
   return (
     <div className="relative flex lg:hidden">
-      <div className="scale-150 text-rose-500 z-50" onClick={() => {
-        setState({
+      <div
+        className="scale-150 text-rose-500 z-50"
+        onClick={() => {
+          setState({
             ...state,
-            visible: !state.visible
-        })
-      }}>
+            visible: !state.visible,
+          });
+        }}
+      >
         <div className="scale-150">
           <MenuIcon />
         </div>
       </div>
       {state.visible && (
-        <div className="fixed w-full h-screen left-0 top-0 overflow-hidden z-40">
+        <div
+          className="fixed w-full h-screen left-0 top-0 overflow-hidden z-40"
+          onClick={() => {
+            setState({
+              ...state,
+              visible: false,
+            });
+          }}
+        >
           <div className="relative w-full h-full pt-20">
             <div className="relative w-full h-full bg-white overflow-hidden">
               <div className="w-full h-full px-3 py-2 overflow-auto flex flex-col gap-2">
-                {
-                    Renderer.MenuItems()
-                }
+                {Renderer.MenuItems()}
                 <span className="w-full border-t border-t-solid border-t-rose-500"></span>
-                <Link href={"/login"} className="hover:underline hover:text-rose-500">Iniciar sesión</Link>
+                <Link
+                  href={"/login"}
+                  className="hover:underline hover:text-rose-500"
+                >
+                  Iniciar sesión
+                </Link>
               </div>
             </div>
           </div>
