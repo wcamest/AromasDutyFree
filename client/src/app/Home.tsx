@@ -225,9 +225,9 @@ const brandsShortcutsMockData: BrandShortcut[] = [
 const Home = (props: Props) => {
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full lg:max-w-6xl flex flex-col gap-20">
+      <div className="w-full px-0 md:px-5 lg:max-w-6xl flex flex-col gap-20">
         <BannerCarouselComponent data={carouselMockData} />
-        <div className="w-full flex flex-col gap-14">
+        <div className="w-full px-5 md:px-0 flex flex-col gap-14">
           <HomeSectionComponent title="Recomendados">
             <ProductsCarouselComponent
               data={recommendedProductsCarouselMockData}

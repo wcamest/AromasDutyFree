@@ -18,7 +18,7 @@ const ProductCarouselSlideComponent = (props: Props) => {
     },
   };
 
-  return <div className="grid place-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">{Renderer.Cards()}</div>;
+  return <div className="grid place-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">{Renderer.Cards()}</div>;
 };
 
 export default ProductCarouselSlideComponent;

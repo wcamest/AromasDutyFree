@@ -13,7 +13,7 @@ export default function RootLayout({
         <NavBarComponent />
         <div className="w-full h-full overflow-hidden">
           <div className="w-full h-full overflow-auto">
-            <div className="w-full min-h-full p-5">{children}</div>
+            <div className="w-full min-h-full">{children}</div>
             <FooterComponent />
           </div>
         </div>
