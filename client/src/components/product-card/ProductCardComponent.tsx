@@ -35,7 +35,7 @@ const ProductCardComponent = (props: Props) => {
   return (
     <div
       style={{ maxWidth: maxWidth ? `${props.maxWidth}px` : undefined }}
-      className="p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
+      className="p-2 md:p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
     >
       <div className="w-full relative aspect-square border border-solid border-rose-300 overflow-hidden rounded-md">
         {Renderer.FeaturedImage()}
