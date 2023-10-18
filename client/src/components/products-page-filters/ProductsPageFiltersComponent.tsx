@@ -2,7 +2,7 @@
 
 import ProductFilter from "@/types/ProductFilter";
 import React from "react";
-import ProductsPageFilterSectionComponent from "./page-filter-section/ProductsPageFilterSectionComponent";
+import ProductsPageFilterSectionComponent from "./products-page-filter-section/ProductsPageFilterSectionComponent";
 
 type Props = {
   filters: ProductFilter[];

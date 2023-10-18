@@ -1,4 +1,5 @@
-import ProductsPageFiltersComponent from "@/components/page-filters/ProductsPageFiltersComponent";
+import ProductsPageFiltersComponent from "@/components/products-page-filters/ProductsPageFiltersComponent";
+import DesktopProductsPageFiltersComponent from "@/components/products-page-filters/desktop-products-page-filters/DesktopProductsPageFiltersComponent";
 import ProductFilter from "@/types/ProductFilter";
 import React, { PropsWithChildren } from "react";
 
@@ -82,17 +83,11 @@ const pageFilterMockData: string = "perfumería";
 const layout = (props: PropsWithChildren<Props>) => {
   return (
     <div className="w-full h-full flex justify-center">
-      <div className="w-full min-h-full max-w-6xl flex overflow-hidden">
-        <div
-          style={{ height: "calc(100vh - 112px)" }}
-          className="w-60 flex flex-col gap-5"
-        >
-          <h2 className="font-semibold text-xl">Filtros</h2>
-          <ProductsPageFiltersComponent
-            filters={productFiltersMockData}
-            pageFilterName={pageFilterMockData}
-          />
-        </div>
+      <div className="w-full min-h-full max-w-6xl p-5 flex overflow-hidden">
+        <DesktopProductsPageFiltersComponent
+          filters={productFiltersMockData}
+          pageFilterName={pageFilterMockData}
+        />
         <div className="w-full">{props.children}</div>
       </div>
     </div>
