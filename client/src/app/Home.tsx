@@ -53,6 +53,7 @@ const recommendedProductsCarouselMockData: ProductCarousel = {
       name: "Product 1",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-1"
     },
     {
       id: "product-2-id",
@@ -67,6 +68,7 @@ const recommendedProductsCarouselMockData: ProductCarousel = {
       name: "Product 2",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-2"
     },
     {
       id: "product-3-id",
@@ -81,6 +83,7 @@ const recommendedProductsCarouselMockData: ProductCarousel = {
       name: "Product 3",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-3"
     },
     {
       id: "product-4-id",
@@ -95,6 +98,7 @@ const recommendedProductsCarouselMockData: ProductCarousel = {
       name: "Product 4",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-4"
     },
     {
       id: "product-5-id",
@@ -109,6 +113,7 @@ const recommendedProductsCarouselMockData: ProductCarousel = {
       name: "Product 5",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-5"
     },
   ],
 };
@@ -129,6 +134,7 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
       name: "Product 6",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-6"
     },
     {
       id: "product-7-id",
@@ -143,6 +149,7 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
       name: "Product 7",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-7"
     },
     {
       id: "product-8-id",
@@ -157,6 +164,7 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
       name: "Product 8",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-8"
     },
     {
       id: "product-9-id",
@@ -171,6 +179,7 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
       name: "Product 9",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-9"
     },
     {
       id: "product-10-id",
@@ -185,6 +194,7 @@ const bestSellersProductsCarouselMockData: ProductCarousel = {
       name: "Product 10",
       recommended: true,
       salePrice: 150000,
+      permalink: "/producto-10"
     },
   ],
 };

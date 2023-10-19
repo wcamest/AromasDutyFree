@@ -24,6 +24,7 @@ const BannerCarouselComponent = (props: Props) => {
       slideInterval={data.slideInterval}
       slides={Renderer.Slides()}
       ghostElement={<div style={{ height: `${data.height}px` }}></div>}
+      ignoreSlideControlMargin={true}
     />
   );
 };
