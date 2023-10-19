@@ -19,6 +19,7 @@ const productsMockData: Product[] = [
     name: "Product 1",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-1"
   },
   {
     id: "product-2-id",
@@ -33,6 +34,7 @@ const productsMockData: Product[] = [
     name: "Product 2",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-2"
   },
   {
     id: "product-3-id",
@@ -47,6 +49,7 @@ const productsMockData: Product[] = [
     name: "Product 3",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-3"
   },
   {
     id: "product-4-id",
@@ -61,6 +64,7 @@ const productsMockData: Product[] = [
     name: "Product 4",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-4"
   },
   {
     id: "product-5-id",
@@ -75,6 +79,7 @@ const productsMockData: Product[] = [
     name: "Product 5",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-5"
   },
   {
     id: "product-6-id",
@@ -89,6 +94,7 @@ const productsMockData: Product[] = [
     name: "Product 6",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-6"
   },
   {
     id: "product-7-id",
@@ -103,6 +109,7 @@ const productsMockData: Product[] = [
     name: "Product 7",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-7"
   },
   {
     id: "product-8-id",
@@ -117,6 +124,7 @@ const productsMockData: Product[] = [
     name: "Product 8",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-8"
   },
   {
     id: "product-9-id",
@@ -131,6 +139,7 @@ const productsMockData: Product[] = [
     name: "Product 9",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-9"
   },
   {
     id: "product-10-id",
@@ -145,6 +154,7 @@ const productsMockData: Product[] = [
     name: "Product 10",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-10"
   },
   {
     id: "product-11-id",
@@ -159,6 +169,7 @@ const productsMockData: Product[] = [
     name: "Product 11",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-11"
   },
   {
     id: "product-12-id",
@@ -173,6 +184,7 @@ const productsMockData: Product[] = [
     name: "Product 12",
     recommended: true,
     salePrice: 150000,
+    permalink: "/producto-12"
   },
 ];
 

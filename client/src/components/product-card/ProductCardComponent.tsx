@@ -4,6 +4,7 @@ import Utils from "@/utils/Utils";
 import Image from "next/image";
 import React from "react";
 import ButtonComponent from "../controls/button/ButtonComponent";
+import Link from "next/link";
 
 type Props = {
   data: Product;
@@ -33,19 +34,25 @@ const ProductCardComponent = (props: Props) => {
   };
 
   return (
-    <div
-      style={{ maxWidth: maxWidth ? `${props.maxWidth}px` : undefined }}
-      className="p-2 md:p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
-    >
-      <div className="w-full relative aspect-square border border-solid border-rose-300 overflow-hidden rounded-md">
-        {Renderer.FeaturedImage()}
+    <Link href={`/producto${data.permalink}`}>
+      <div
+        style={{ maxWidth: maxWidth ? `${props.maxWidth}px` : undefined }}
+        className="p-2 md:p-4 flex flex-col gap-1 border border-solid border-rose-300 rounded-md"
+      >
+        <div className="w-full relative aspect-square border border-solid border-rose-300 overflow-hidden rounded-md">
+          {Renderer.FeaturedImage()}
+        </div>
+        <h2 className="text-lg md:text-xl">{data.name}</h2>
+        <h3 className="text-xs md:text-lg">{`$${Utils.FormatCurrency(
+          data.salePrice
+        )}`}</h3>
+        <div className="w-full mt-8 flex justify-stretch">
+          <ButtonComponent className="w-full text-xs md:text-lg">
+            Consultar stock
+          </ButtonComponent>
+        </div>
       </div>
-      <h2 className="text-lg md:text-xl">{data.name}</h2>
-      <h3 className="text-xs md:text-lg">{`$${Utils.FormatCurrency(data.salePrice)}`}</h3>
-      <div className="w-full mt-8 flex justify-stretch">
-        <ButtonComponent className="w-full text-xs md:text-lg">Consultar stock</ButtonComponent>
-      </div>
-    </div>
+    </Link>
   );
 };
 

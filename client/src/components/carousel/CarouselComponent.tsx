@@ -9,6 +9,7 @@ type Props = {
   slideInterval: number;
   slides: React.JSX.Element[];
   ghostElement: React.JSX.Element;
+  ignoreSlideControlMargin?: boolean;
 };
 
 type CarouselComponentState = {
@@ -17,7 +18,12 @@ type CarouselComponentState = {
 };
 
 const CarouselComponent = (props: Props) => {
-  const { slideInterval, slides, ghostElement } = props;
+  const {
+    slideInterval,
+    slides,
+    ghostElement,
+    ignoreSlideControlMargin = false,
+  } = props;
   const [state, setState] = useState<CarouselComponentState>({
     timerId: undefined,
     currentSlideIndex: 0,
@@ -105,26 +111,30 @@ const CarouselComponent = (props: Props) => {
           {Renderer.Slides()}
         </div>
         <div
-          className="relative w-12 h-full flex justify-center items-center cursor-pointer text-white"
+          className={`relative ${
+            ignoreSlideControlMargin ? "" : "-ml-6 lg:-ml-12"
+          } w-12 h-full flex justify-center items-center cursor-pointer text-white`}
           onClick={() => {
             Functions.PreviousSlide();
           }}
         >
           <ChevronLeftIcon
             style={{
-              scale: "3",
+              scale: "2",
             }}
           />
         </div>
         <div
-          className="relative w-12 h-full flex justify-center items-center cursor-pointer text-white"
+          className={`relative ${
+            ignoreSlideControlMargin ? "" : "-mr-6 lg:-mr-12"
+          } w-12 h-full flex justify-center items-center cursor-pointer text-white`}
           onClick={() => {
             Functions.NextSlide();
           }}
         >
           <ChevronRightIcon
             style={{
-              scale: "3",
+              scale: "2",
             }}
           />
         </div>
